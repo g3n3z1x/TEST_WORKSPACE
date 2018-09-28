@@ -1,0 +1,117 @@
+package com.codewars.test;
+
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.List;
+
+//Calculator
+//3 kyu
+public class Calculator {
+
+	public static void main(String[] args) {
+		evaluate("2 / 2 + 3 * 4 - 6");
+	}
+
+	private static final Character add = '+';
+	private static final Character substract = '-';
+	private static final Character multiply = '*';
+	private static final Character divide = '/';
+
+	public static Double evaluate(String expression) {
+		// get rid of spaces
+		expression = expression.replaceAll(" ", "");
+		System.out.println(expression);
+
+		if (expression.equals("")) {
+			// empty
+			return null;
+		}
+
+		/**/
+		// save in a list the positions of each operator
+		List<OperatorIndex> operatorList = new ArrayList<OperatorIndex>();
+		updateOperatorList(operatorList, expression);
+
+		// iterate in mathematical order and get an operator
+		OperatorIndex operator = null;
+		for (OperatorIndex oi : operatorList) {
+			if (oi.getOperator().equals(multiply) || oi.getOperator().equals(divide)) {
+				operator = oi;
+				break;
+			}
+		}
+		for (OperatorIndex oi : operatorList) {
+			if (oi.getOperator().equals(add) || oi.getOperator().equals(substract)) {
+				operator = oi;
+				break;
+			}
+		}
+		if (operator == null) {
+			// contains no operator, just a number
+			return Double.valueOf(expression);
+		}
+
+		// obtain the involved numbers
+
+		// set the result at the position, generate new expression
+
+		// update the list of operators, then evaluate again
+
+		/**/
+
+		return -1.0;
+	}
+
+	private static void updateOperatorList(List<OperatorIndex> operatorList, String expression) {
+		for (int i = 0; i < expression.length(); i++) {
+			char c = expression.charAt(i);
+			if (c == add || c == substract || c == multiply || c == divide) {
+				OperatorIndex oi = new OperatorIndex(i, expression.charAt(i));
+				operatorList.add(oi);
+			}
+		}
+	}
+
+	public static Double roundFormat(Double value) {
+		DecimalFormat df = new DecimalFormat("#.####");
+		df.setRoundingMode(RoundingMode.CEILING);
+		Double result = Double.parseDouble(df.format(value));
+		System.out.println(result);
+		return result;
+	}
+
+	public static class OperatorIndex {
+		private int index;
+		private Character operator;
+
+		public OperatorIndex(int index, Character operator) {
+			super();
+			this.index = index;
+			this.operator = operator;
+		}
+
+		public int getIndex() {
+			return index;
+		}
+
+		public void setIndex(int index) {
+			this.index = index;
+		}
+
+		public Character getOperator() {
+			return operator;
+		}
+
+		public void setOperator(Character operator) {
+			this.operator = operator;
+		}
+
+		@Override
+		public String toString() {
+			return "OperatorIndex [index=" + index + ", operator=" + operator + "]";
+		}
+
+	}
+
+}

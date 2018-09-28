@@ -1,0 +1,12 @@
+package com.codewars.test;
+
+//Sudoku Solution Validator
+//4 kyu
+public class SudokuValidator {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

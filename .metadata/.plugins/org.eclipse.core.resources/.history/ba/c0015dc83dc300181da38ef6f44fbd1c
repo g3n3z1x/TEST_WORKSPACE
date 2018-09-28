@@ -1,0 +1,12 @@
+package com.codewars.test;
+
+//Calculator
+//3 kyu
+public class Calculator {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

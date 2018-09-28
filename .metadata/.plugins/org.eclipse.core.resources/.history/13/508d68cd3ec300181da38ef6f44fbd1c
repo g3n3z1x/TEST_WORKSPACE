@@ -1,0 +1,22 @@
+package com.codewars.test;
+
+//Calculator
+//3 kyu
+public class Calculator {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	private static final String add = "+";
+	private static final String substract = "-";
+	private static final String multiply = "*";
+	private static final String divide = "/";
+
+	public static Double evaluate(String expression) {
+		// your code here
+		return -1.0;
+	}
+
+}

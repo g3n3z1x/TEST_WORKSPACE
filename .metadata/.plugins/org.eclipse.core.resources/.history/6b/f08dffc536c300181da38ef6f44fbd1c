@@ -1,0 +1,28 @@
+package com.codewars.test;
+
+//Sudoku Solution Validator
+//4 kyu
+public class SudokuValidator {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public static boolean check(int[][] sudoku) {
+
+		//
+
+		return true;
+	}
+
+	public static void printSudoku(int[][] sudoku) {
+		for (int i = 0; i < sudoku.length; i++) {
+			for (int j = 0; j < sudoku[0].length; j++) {
+				System.out.println(sudoku[i][j]);
+			}
+			System.out.println();
+		}
+	}
+
+}

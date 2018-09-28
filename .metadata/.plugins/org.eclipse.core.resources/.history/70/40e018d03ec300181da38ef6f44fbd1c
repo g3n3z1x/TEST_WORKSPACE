@@ -1,0 +1,34 @@
+package com.codewars.test;
+
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
+import java.util.Arrays;
+
+//Calculator
+//3 kyu
+public class Calculator {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	private static final String add = "+";
+	private static final String substract = "-";
+	private static final String multiply = "*";
+	private static final String divide = "/";
+
+	public static Double evaluate(String expression) {
+		// your code here
+		return -1.0;
+	}
+
+	public static Double roundFormat(Double value) {
+		DecimalFormat df = new DecimalFormat("#.####");
+		df.setRoundingMode(RoundingMode.CEILING);
+		Double result = Double.parseDouble(df.format(value));
+		System.out.println(result);
+		return result;
+	}
+
+}
