@@ -1,0 +1,32 @@
+package com.codewars.test;
+
+import java.util.stream.IntStream;
+import java.util.stream.LongStream;
+
+// Prime Streaming
+// 2 kyu
+public class Primes {
+
+	public static void main(String[] args) {
+		stream();
+	}
+
+	public static IntStream stream() {
+		int max = 50000000;
+		return IntStream.iterate(2, i -> i + 1).filter(x -> intIsPrime(x)).limit(max);
+	}
+
+	public static boolean intIsPrime(long x) {
+		return IntStream.rangeClosed(2, (int) (Math.sqrt(x))).anyMatch((n -> x % n == 0);
+	}
+
+	/* long version */
+	public static LongStream primeSequence(long max) {
+		return LongStream.iterate(2, i -> i + 1).filter(x -> longIsPrime(x)).limit(max);
+	}
+
+	public static boolean longIsPrime(long x) {
+		return LongStream.rangeClosed(2, (long) (Math.sqrt(x))).allMatch(n -> x % n != 0);
+	}
+
+}

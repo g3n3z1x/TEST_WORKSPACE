@@ -1,0 +1,110 @@
+package com.codewars.test.go.game;
+
+import java.util.SortedMap;
+import java.util.TreeMap;
+
+// Game of Go
+// 2 kyu
+public class Go {
+
+	@SuppressWarnings("unused")
+	public static void main(String[] args) {
+		Go game = new Go(19);
+		char[][] board = game.getBoard();
+		// game.printBoard();
+		System.out.println(game.getTurn());
+		System.out.println(game.getSize());
+		game.handicapStones(0);
+		game.printBoard();
+		game.move("7A");
+		game.move("1A");
+		game.move("8J");
+		game.printBoard();
+	}
+
+	private Board board;
+	private boolean isBlackTurn;
+	private boolean isHandicap;
+
+	public Go(int size) {
+		board = new Board(size, size);
+		setBlackTurn(true);
+		setHandicap(false);
+	}
+
+	public Go(int sizeY, int sizeX) {
+		board = new Board(sizeY, sizeX);
+		setBlackTurn(true);
+		setHandicap(false);
+	}
+
+	public void printBoard() {
+		board.printBoard();
+	}
+
+	public void move(String coordinate) {
+		board.move(coordinate, isBlackTurn);
+		setBlackTurn(!isBlackTurn);
+	}
+
+	public String getTurn() {
+		return isBlackTurn ? "black" : "white";
+	}
+
+	public void passTurn() {
+		setBlackTurn(!isBlackTurn);
+		board.recordHistory();
+	}
+
+	public void reset() {
+		setBlackTurn(true);
+		setHandicap(false);
+		board.initialize();
+	}
+
+	public SortedMap<String, Integer> getSize() {
+		SortedMap<String, Integer> size = new TreeMap<String, Integer>();
+		size.put("width", board.getWidth());
+		size.put("height", board.getHeight());
+		return size;
+	}
+
+	public void handicapStones(int handicapStones) {
+		if (handicapStones < 1) {
+			throw new IllegalArgumentException("Can't place handicap stones on this board's size.");
+		} else if (board.getHeight() == board.getWidth()
+				&& (board.getHeight() == 9 || board.getHeight() == 13 || board.getHeight() == 19)) {
+			board.placeHandicapStones(board.getHeight(), handicapStones);
+			setHandicap(true);
+		} else {
+			setHandicap(false);
+			throw new IllegalArgumentException("Can't place handicap stones on this board's size.");
+		}
+	}
+
+	// G&S
+	public boolean isBlackTurn() {
+		return isBlackTurn;
+	}
+
+	public void setBlackTurn(boolean isBlackTurn) {
+		this.isBlackTurn = isBlackTurn;
+	}
+
+	public char[][] getBoard() {
+		return board.getBoard();
+	}
+
+	public void setBoard(Board board) {
+		this.board = board;
+	}
+
+	public boolean isHandicap() {
+		return isHandicap;
+	}
+
+	public void setHandicap(boolean isHandicap) {
+		this.isHandicap = isHandicap;
+	}
+
+}

@@ -1,0 +1,36 @@
+package com.codewars.test;
+
+import java.util.*;
+
+public class PokerHand {
+
+	public static void main(String[] args) {
+		String playerHand = "";
+		String opponentHand = "";
+		PokerHand player = new PokerHand(playerHand);
+		PokerHand opponent = new PokerHand(opponentHand);
+		player.compareWith(opponent);
+	}
+
+	public enum Result {
+		TIE, WIN, LOSS
+	}
+
+	String[] thisHand;
+
+	PokerHand(String hand) {
+		this.thisHand = hand.split(" ");
+	}
+
+	public Result compareWith(PokerHand hand) {
+		String[] otherHand = hand.thisHand;
+
+		// compare thisHand vs otherHand
+		// start with top complexity cases of texas holdem
+		
+		
+
+		return Result.TIE;
+	}
+
+}

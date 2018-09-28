@@ -1,0 +1,15 @@
+package com.codewars.test;
+
+public class ProdFib {
+
+	public static void main(String[] args) {
+		long prod = 0;
+		productFib(prod);
+	}
+
+	public static long[] productFib(long prod) {
+		// your code
+		return null;
+	}
+
+}

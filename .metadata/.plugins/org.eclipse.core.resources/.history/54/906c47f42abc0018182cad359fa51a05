@@ -1,0 +1,67 @@
+package com.codewars.test;
+
+import java.util.*;
+
+public class PokerHand {
+	
+	String[] thisHand;
+
+	PokerHand(String hand) {
+		this.thisHand = hand.split(" ");
+	}
+
+	public static void main(String[] args) {
+		String playerHand = "2H 3H 4H 5H 6H";
+		String opponentHand = "KS AS TS QS JS";
+		PokerHand player = new PokerHand(playerHand);
+		PokerHand opponent = new PokerHand(opponentHand);
+		player.compareWith(opponent);
+	}
+	public Result compareWith(PokerHand hand) {
+		String[] otherHand = hand.thisHand;
+
+		// compare thisHand vs otherHand
+		// start with top complexity cases of texas holdem
+		
+		return Result.TIE;
+	}
+
+	public static String checkCase(String[] hand) {
+		String handValue = "";
+		
+		
+		
+		return handValue;
+	}
+	
+	public enum Result {
+		TIE, WIN, LOSS
+	}
+	
+	public enum HandValue {
+		ROYAL_FLUSH("ROYAL_FLUSH",10),
+		STRAIGHT_FLUSH("STRAIGHT_FLUSH",9),
+		FOUR_OF_A_KIND("FOUR_OF_A_KIND",8),
+		FULL_HOUSE("FULL_HOUSE",7),
+		FLUSH("FLUSH",6),
+		STRAIGHT("STRAIGHT",5),
+		THREE_OF_A_KIND("THREE_OF_A_KIND",4),
+		TWO_PAIRS("TWO_PAIRS",3),
+		PAIR("PAIR",2),
+		HIGHCARD("HIGHCARD",1)
+		;
+		private final String key;
+	    private final Integer value;
+	    HandValue(String key, Integer value) {
+	        this.key = key;
+	        this.value = value;
+	    }
+	    public String getKey() {
+	        return key;
+	    }
+	    public Integer getValue() {
+	        return value;
+	    }
+	}
+
+}

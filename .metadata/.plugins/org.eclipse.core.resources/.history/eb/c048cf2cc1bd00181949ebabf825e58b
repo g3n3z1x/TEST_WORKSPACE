@@ -1,0 +1,28 @@
+package com.codewars.test;
+
+public class Persist {
+
+	public static void main(String[] args) {
+		persistence(39);
+	}
+
+	private static int numberOfTimes = 0;
+
+	public static int persistence(long n) {
+		multiplyUntilOneDigit(n);
+		System.out.println(numberOfTimes);
+		return numberOfTimes;
+	}
+
+	public static long multiplyUntilOneDigit(long n) {
+		long number = 0;
+		if (String.valueOf(n).length() == 1) {
+			return n;
+		} else {
+			numberOfTimes++;
+			number *= multiplyUntilOneDigit(number / 10);
+			return number;
+		}
+	}
+
+}

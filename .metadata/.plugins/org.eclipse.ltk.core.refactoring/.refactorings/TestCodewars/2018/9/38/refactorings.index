@@ -1,0 +1,7 @@
+1537192429706	Delete element
+1537292370583	Rename local variable 'k'
+1537292385179	Rename local variable 'l'
+1537480071092	Encapsulate field 'highestCard'
+1537484938568	Encapsulate field 'restCards'
+1537540297629	Encapsulate field 'cards'
+1537542084230	Encapsulate field 'highestPair'

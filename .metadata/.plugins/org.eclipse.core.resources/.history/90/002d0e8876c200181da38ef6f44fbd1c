@@ -1,0 +1,25 @@
+package com.codewars.test.go.game;
+
+public class Stone {
+
+	private static final char empty = '.';
+	private static final char white = 'o';
+	private static final char black = 'x';
+
+	public Stone() {
+	};
+
+	// G&S
+	public static char getEmpty() {
+		return empty;
+	}
+
+	public static char getWhite() {
+		return white;
+	}
+
+	public static char getBlack() {
+		return black;
+	}
+
+}

@@ -1,0 +1,15 @@
+package com.codewars.test;
+
+public class Persist {
+
+	public static void main(String[] args) {
+		persistence(39);
+	}
+
+	public static int persistence(long n) {
+		int result = 0;
+
+		return result;
+	}
+
+}

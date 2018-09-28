@@ -1,0 +1,15 @@
+package com.codewars.test;
+
+public class ProdFib {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public static long[] productFib(long prod) {
+		// your code
+		return null;
+	}
+
+}

@@ -1,0 +1,28 @@
+package com.codewars.test;
+
+import java.util.*;
+
+public class PokerHand {
+
+	public static void main(String[] args) {
+		String playerHand = "";
+		String opponentHand = "";
+		PokerHand player = new PokerHand(playerHand);
+		PokerHand opponent = new PokerHand(opponentHand);
+		player.compareWith(opponent);
+	}
+
+	public enum Result {
+		TIE, WIN, LOSS
+	}
+
+	PokerHand(String hand) {
+		String[] handArray = hand.split(" ");
+	}
+
+	public Result compareWith(PokerHand hand) {
+		
+		return Result.TIE;
+	}
+
+}

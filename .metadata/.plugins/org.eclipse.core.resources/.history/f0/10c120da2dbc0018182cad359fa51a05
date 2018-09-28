@@ -1,0 +1,98 @@
+package com.codewars.test;
+
+import java.util.*;
+
+public class PokerHand {
+
+	String[] thisHand;
+
+	PokerHand(String hand) {
+		this.thisHand = hand.split(" ");
+	}
+
+	public static void main(String[] args) {
+		String playerHand = "2H 3H 4H 5H 6H";
+		String opponentHand = "KS AS TS QS JS";
+		PokerHand player = new PokerHand(playerHand);
+		PokerHand opponent = new PokerHand(opponentHand);
+		player.compareWith(opponent);
+	}
+
+	public Result compareWith(PokerHand hand) {
+		String[] otherHand = hand.thisHand;
+
+		// check which case is each hand
+		// start with top complexity cases of texas holdem
+		HandValue thisHandValue = checkHandValue(thisHand);
+		HandValue otherHandValue = checkHandValue(otherHand);
+
+		// compare thisHand vs otherHand
+
+		return Result.TIE;
+	}
+
+	public static HandValue checkHandValue(String[] hand) {
+		HandValue handValue = null;
+		
+		//check if hand is all same suit
+		
+		
+		
+		//check if hand can have an ordered sequence
+		
+		
+		
+		//check if hand has repeated cards
+		
+		
+
+		// Royal FLush: Straight flush from Ten to Ace
+
+		// Straight flush: Straight of the same suit
+
+		// Four of a kind: Four cards of the same value
+
+		// Full house: Combination of three of a kind and a pair
+
+		// Flush: 5 cards of the same suit
+
+		// Straight: Sequence of 5 cards in increasing value (Ace can precede 2 and
+		// follow up King)
+
+		// Three of a kind: Three cards with the same value
+
+		// Two pairs: Two times two cards with the same value
+
+		// Pair: Two cards with the same value
+
+		// Highcard: Simple value of the card. Lowest: 2 - Highest: Ace
+
+		return handValue;
+	}
+
+	public enum Result {
+		TIE, WIN, LOSS
+	}
+
+	public enum HandValue {
+		ROYAL_FLUSH("ROYAL_FLUSH", 10), STRAIGHT_FLUSH("STRAIGHT_FLUSH", 9), FOUR_OF_A_KIND("FOUR_OF_A_KIND",
+				8), FULL_HOUSE("FULL_HOUSE", 7), FLUSH("FLUSH", 6), STRAIGHT("STRAIGHT", 5), THREE_OF_A_KIND(
+						"THREE_OF_A_KIND", 4), TWO_PAIRS("TWO_PAIRS", 3), PAIR("PAIR", 2), HIGHCARD("HIGHCARD", 1);
+		private final String key;
+		private final Integer value;
+
+		HandValue(String key, Integer value) {
+			this.key = key;
+			this.value = value;
+		}
+
+		public String getKey() {
+			return key;
+		}
+
+		public Integer getValue() {
+			return value;
+		}
+	}
+
+}

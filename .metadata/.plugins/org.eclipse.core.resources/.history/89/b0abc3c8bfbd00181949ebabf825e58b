@@ -1,0 +1,26 @@
+package com.codewars.test;
+
+public class Persist {
+
+	public static void main(String[] args) {
+		persistence(39);
+	}
+
+	public static int persistence(long n) {
+		int result = 0;
+		result = (int) multiplyUntilOneDigit(n);
+		System.out.println(result);
+		return result;
+	}
+
+	public static long multiplyUntilOneDigit(long n) {
+		long number = 0;
+		if (String.valueOf(n).length() == 1) {
+			return n;
+		} else {
+			number *= multiplyUntilOneDigit(number / 10);
+			return number;
+		}
+	}
+
+}
