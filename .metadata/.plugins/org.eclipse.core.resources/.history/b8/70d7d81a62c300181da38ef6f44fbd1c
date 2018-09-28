@@ -1,0 +1,16 @@
+package com.codewars.test;
+
+import java.util.List;
+
+public class ObservedPin {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public static List<String> getPINs(String observed) {
+		return null;
+	} // getPINs
+
+}

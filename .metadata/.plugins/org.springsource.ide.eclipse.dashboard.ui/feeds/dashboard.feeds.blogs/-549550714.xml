@@ -5,7 +5,7 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2018-09-27T15:00:16Z</updated>
+  <updated>2018-09-27T15:00:00Z</updated>
   <entry>
     <title>What's new in Spring Data Lovelace?</title>
     <link rel="alternate" href="https://spring.io/blog/2018/09/27/what-s-new-in-spring-data-lovelace" />
@@ -14,7 +14,7 @@
       <name>Oliver Gierke</name>
     </author>
     <id>tag:spring.io,2018-09-18:3398</id>
-    <updated>2018-09-27T15:00:16Z</updated>
+    <updated>2018-09-27T15:00:00Z</updated>
     <content type="html">&lt;div class="paragraph"&gt;
 &lt;p&gt;With Spring Data Lovelace just released in its generally available version last week, it is time to have a brief walk through the new features we have added.
 The release train is pretty packed with features.
@@ -24,7 +24,7 @@ Advanced, store-specific news is covered in the following blog posts:&lt;/p&gt;
 &lt;div class="ulist"&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href="https://spring.io/blog/2018/09/24/spring-data-jdbc-references-and-aggregates"&gt;Jens Schauder introducing Spring Data JDBC&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://spring.io/blog/2018/09/17/introducing-spring-data-jdbc"&gt;Jens Schauder introducing Spring Data JDBC&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href="https://spring.io/blog/2018/09/24/spring-data-jdbc-references-and-aggregates"&gt;Jens again on how to model aggregates with Spring Data JDBC&lt;/a&gt;&lt;/p&gt;

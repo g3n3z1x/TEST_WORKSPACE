@@ -1,0 +1,42 @@
+package com.codewars.test;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ObservedPin {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	String[] adjacentsOf1 = new String[] { "2", "4" };
+	String[] adjacentsOf2 = new String[] { "1", "5", "3" };
+	String[] adjacentsOf3 = new String[] { "2", "6" };
+	String[] adjacentsOf4 = new String[] { "1", "5", "7" };
+	String[] adjacentsOf5 = new String[] { "2", "4", "6", "8" };
+	String[] adjacentsOf6 = new String[] { "3", "5", "9" };
+	String[] adjacentsOf7 = new String[] { "4", "8" };
+	String[] adjacentsOf8 = new String[] { "5", "7", "9", "0" };
+	String[] adjacentsOf9 = new String[] { "6", "8" };
+	String[] adjacentsOf0 = new String[] { "8" };
+
+	public static List<String> getPINs(String observed) {
+		List<String> list = new ArrayList<String>();
+
+		generateAllPINCombinations(observed, list);
+
+		return null;
+	} // getPINs
+
+	private static String generateAllPINCombinations(String observed, List<String> list) {
+		if() {
+			
+		}else {
+			
+		}
+		
+		return "";
+	}
+
+}

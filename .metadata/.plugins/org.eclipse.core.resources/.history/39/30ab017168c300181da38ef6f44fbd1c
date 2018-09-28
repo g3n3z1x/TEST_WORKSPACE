@@ -1,0 +1,58 @@
+package com.codewars.test;
+
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.List;
+
+public class ObservedPin {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	private static final String[] case1 = new String[] { "1", "2", "4" };
+	private static final String[] case2 = new String[] { "2", "1", "5", "3" };
+	private static final String[] case3 = new String[] { "3", "2", "6" };
+	private static final String[] case4 = new String[] { "4", "1", "5", "7" };
+	private static final String[] case5 = new String[] { "5", "2", "4", "6", "8" };
+	private static final String[] case6 = new String[] { "6", "3", "5", "9" };
+	private static final String[] case7 = new String[] { "7", "4", "8" };
+	private static final String[] case8 = new String[] { "8", "5", "7", "9", "0" };
+	private static final String[] case9 = new String[] { "9", "6", "8" };
+	private static final String[] case0 = new String[] { "0", "8" };
+
+	public static List<String> getPINs(String observed) {
+		if (observed.length() < 1 || observed.length() > 8) {
+			return null;
+		}
+		List<String> list = new ArrayList<String>();
+
+		generateAllPINCombinations(observed, list);
+
+		return null;
+	} // getPINs
+
+	private static String generateAllPINCombinations(String observed, List<String> list) {
+		// get all arrays needed according to each digit observed
+		ArrayDeque<String[]> arraysDeque = new ArrayDeque<String[]>();
+		for (int i = 0; i < observed.length(); i++) {
+			switch (observed.charAt(i)) {
+			case '1':
+				arraysDeque.add(case1);
+				break;
+
+			default:
+				break;
+			}
+			arraysDeque.add(e);
+
+		}
+
+		// iterate the deque to get all combinations
+
+		String number = observed.substring(0, 1);
+		return "";
+	}
+
+}
